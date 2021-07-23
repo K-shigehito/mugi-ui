@@ -1,21 +1,15 @@
 <template>
-  <BaseButton>Base</BaseButton>
-  <PrimaryButton>Primary</PrimaryButton>
-  <SecondaryButton>Secondary</SecondaryButton>
+  <ButtonSample />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import BaseButton from './components/buttons/BaseButton.vue';
-import PrimaryButton from './components/buttons/PrimaryButton.vue';
-import SecondaryButton from './components/buttons/SecondaryButton.vue';
+import ButtonSample from './components/buttons/ButtonSample.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    BaseButton,
-    PrimaryButton,
-    SecondaryButton,
+    ButtonSample,
   },
 });
 </script>
