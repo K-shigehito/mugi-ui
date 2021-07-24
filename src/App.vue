@@ -3,6 +3,7 @@
     <ButtonSample />
     <DialogSample />
     <InputTextSample />
+    <InputRadioSample />
   </div>
 </template>
 
@@ -11,6 +12,7 @@ import { defineComponent } from 'vue';
 import ButtonSample from './components/buttons/ButtonSample.vue';
 import DialogSample from './components/modals/DialogSample.vue';
 import InputTextSample from './components/forms/InputTextSample.vue';
+import InputRadioSample from './components/forms/InputRadioSample.vue';
 
 export default defineComponent({
   name: 'App',
@@ -18,6 +20,7 @@ export default defineComponent({
     ButtonSample,
     DialogSample,
     InputTextSample,
+    InputRadioSample,
   },
 });
 </script>
