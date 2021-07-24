@@ -17,7 +17,7 @@
       @click.stop="clickBackDrop"
     >
       <section
-        class="box-border max-w-screen-sm p-3 mx-2 my-16 bg-white shadow-xl rounded-20"
+        class="box-border max-w-screen-sm p-3 mx-2 my-16 bg-white shadow-xl rounded-md"
         @click.stop
       >
         <!-- ヘッダー -->
