@@ -1,11 +1,31 @@
 {
   "name": "mugi-ui",
   "version": "0.0.0",
+  "repository": "https://github.com/K-shigehito/mugi-ui.git",
   "scripts": {
     "dev": "vite",
     "tsc": "vue-tsc --noEmit",
     "build": "npm run tsc && vite build",
     "serve": "vite preview"
+  },
+  "types": "src/index.ts",
+  "module": "./dist/mugi-ui.es.js",
+  "main": "./dist/mugi-ui.umd.js",
+  "files": [
+    "dist",
+    "src/index.ts",
+    "src/components/*"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/mugi-ui.es.js",
+      "require": "./dist/mugi-ui.umd.js"
+    },
+    "./style": "./dist/style.css"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.5",
+    "@vue/compiler-sfc": "^3.0.5"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -17,6 +37,7 @@
     "@vitejs/plugin-vue": "^1.2.5",
     "@vue/compiler-sfc": "^3.0.5",
     "autoprefixer": "^10.3.1",
+    "cross-env": "^7.0.3",
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "^7.14.0",
