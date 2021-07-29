@@ -24,7 +24,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import PrimaryButton from '../buttons/PrimaryButton.vue';
+import PrimaryButton from '../buttons/BasicButton.vue';
 import SecondaryButton from '../buttons/SecondaryButton.vue';
 import MyDialog from './MyDialog.vue';
 

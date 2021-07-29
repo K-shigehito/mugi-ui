@@ -1,5 +1,5 @@
 import './assets/tailwind.css';
-export { default as PrimaryButton } from './components/buttons/PrimaryButton.vue';
+export { default as BasicButton } from './components/buttons/BasicButton.vue';
 export { default as SecondaryButton } from './components/buttons/SecondaryButton.vue';
 export { default as MyDialog } from './components/dialog/MyDialog.vue';
 export { default as InputRadio } from './components/forms/InputRadio.vue';

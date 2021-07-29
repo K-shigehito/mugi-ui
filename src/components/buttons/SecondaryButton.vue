@@ -2,11 +2,11 @@
   <a
     v-if="$attrs.href"
     :disabled="disabled"
-    class="inline-flex items-center justify-center px-2 no-underline rounded-md h-11"
+    class="inline-flex items-center justify-center px-[12px] no-underline rounded-[4px] h-[40px]"
     :class="linkButtonClass"
     ><slot />
   </a>
-  <BaseButton v-else :disabled="disabled" :class="buttonClass" @click="handleClick">
+  <BaseButton v-else :disabled="disabled" :class="disabledClass" @click="handleClick">
     <slot />
   </BaseButton>
 </template>
@@ -37,16 +37,16 @@ export default defineComponent({
     const handleClick = () => {
       emit('click');
     };
-    const buttonClass = computed(() =>
-      props.disabled ? 'text-gray-400 bg-gray-100' : 'text-gray-900 bg-gray-200'
+    const disabledClass = computed(() =>
+      props.disabled ? 'text-gray-400 bg-gray-100' : 'text-gray-900 bg-gray-200 hover:opacity-80'
     );
     const linkButtonClass = computed(() =>
-      props.disabled ? 'text-gray-400 bg-gray-100' : 'text-gray-900 bg-gray-200'
+      props.disabled ? 'text-gray-400 bg-gray-100' : 'text-gray-900 bg-gray-200 hover:opacity-80'
     );
 
     return {
       handleClick,
-      buttonClass,
+      disabledClass,
       linkButtonClass,
     };
   },

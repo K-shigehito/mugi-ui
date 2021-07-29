@@ -1,5 +1,5 @@
 <template>
-  <BaseButton :disabled="disabled" :class="buttonClass" @click="handleClick">
+  <BaseButton :disabled="disabled" :class="disabledClass" @click="handleClick">
     <slot />
   </BaseButton>
 </template>
@@ -9,7 +9,7 @@ import { computed, defineComponent } from 'vue';
 import BaseButton from './BaseButton.vue';
 
 export default defineComponent({
-  name: 'PrimaryButton',
+  name: 'BasicButton',
   components: {
     BaseButton,
   },
@@ -26,13 +26,11 @@ export default defineComponent({
     const handleClick = () => {
       emit('click');
     };
-    const buttonClass = computed(() =>
-      props.disabled ? 'text-gray-400 bg-gray-100' : 'text-white bg-gray-800'
-    );
+    const disabledClass = computed(() => (props.disabled ? 'opacity-40' : 'hover:opacity-80'));
 
     return {
       handleClick,
-      buttonClass,
+      disabledClass,
     };
   },
 });
