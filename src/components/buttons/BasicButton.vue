@@ -13,20 +13,25 @@ export default defineComponent({
   components: {
     BaseButton,
   },
+
   props: {
     disabled: {
       type: Boolean,
       default: false,
     },
   },
+
   emits: {
     click: null,
   },
+
   setup(props, { emit }) {
     const handleClick = () => {
       emit('click');
     };
-    const disabledClass = computed(() => (props.disabled ? 'opacity-40' : 'hover:opacity-80'));
+    const disabledClass = computed(() =>
+      props.disabled ? 'opacity-30 cursor-not-allowed' : 'hover:opacity-80'
+    );
 
     return {
       handleClick,

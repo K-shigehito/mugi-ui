@@ -1,7 +1,7 @@
 <template>
   <button
-    class="px-[12px] rounded-[4px] h-[40px]"
-    :class="[typeClass, outlineClass]"
+    class="px-[12px] rounded-[4px] h-[40px] font-base tracking-[0.01em]"
+    :class="[typeClass, outlineClass, shadowClass, roundedClass, textClass, textColorClass]"
     @click="handleClick"
   >
     <slot />
@@ -22,6 +22,18 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+    shadow: {
+      type: Boolean,
+      default: false,
+    },
+    rounded: {
+      type: Boolean,
+      default: false,
+    },
+    text: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   emits: {
@@ -33,10 +45,10 @@ export default defineComponent({
       emit('click');
     };
 
-    // タイプクラス
+    // タイプ
     const typeClass = computed(() => {
       if (props.type === 'default') {
-        return 'bg-[#93918F] border-0 border-[#93918F] text-[#93918F]';
+        return 'bg-[#93918F] border-0 border-[#333] text-[#333]';
       } else if (props.type === 'primary') {
         return 'bg-[#005392] border-0 border-[#005392] text-[#005392]';
       } else if (props.type === 'secondary') {
@@ -50,19 +62,33 @@ export default defineComponent({
       }
     });
 
-    // アウトラインクラス
-    const outlineClass = computed(() => {
-      if (props.outlined) {
-        return 'box-border !border-[1px] bg-opacity-10 text-transparent';
-      } else {
-        return '!text-[#FFFFFF]';
-      }
-    });
+    // アウトライン
+    const outlineClass = computed(() =>
+      props.outlined ? 'box-border border-[1px] bg-opacity-0 hover:bg-opacity-10' : ''
+    );
+
+    // シャドウ
+    const shadowClass = computed(() => (props.shadow ? 'shadow-md' : ''));
+
+    // ラウンド
+    const roundedClass = computed(() => (props.rounded ? 'rounded-full px-[16px]' : ''));
+
+    // テキスト
+    const textClass = computed(() => (props.text ? 'bg-opacity-0 hover:bg-opacity-10' : ''));
+
+    // テキストカラー
+    const textColorClass = computed(() =>
+      textClass.value || outlineClass.value ? '' : 'text-[#FFFFFF]'
+    );
 
     return {
       handleClick,
       typeClass,
       outlineClass,
+      shadowClass,
+      roundedClass,
+      textClass,
+      textColorClass,
     };
   },
 });

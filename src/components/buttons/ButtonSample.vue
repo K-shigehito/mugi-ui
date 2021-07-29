@@ -1,13 +1,13 @@
 <template>
-  <div>
-    <h2 class="mb-[40px] text-3xl font-bold">Buttons</h2>
+  <div class="max-w-[760px] bg-gray-100 mx-auto rounded-[12px] p-[20px]">
+    <h2 class="mb-[40px] pl-[8px] text-3xl font-bold border-l-[4px] border-[#777]">Buttons</h2>
 
     <!-- Basic Button -->
     <div class="mb-[40px]">
-      <h3 class="text-2xl font-bold mb-[8px]">Basic Button</h3>
+      <h3 class="text-2xl font-bold mb-[8px] border-b-[2px] border-[#777]">Basic Button</h3>
 
-      <section class="mb-[12px]">
-        <h4 class="text-lg mb-[4px]">type</h4>
+      <section class="mb-[20px]">
+        <h4 class="text-lg mb-[4px]">Type</h4>
         <div class="flex gap-[8px]">
           <BasicButton @click="handleClick">Default</BasicButton>
           <BasicButton type="primary" @click="handleClick">Primary</BasicButton>
@@ -17,8 +17,8 @@
         </div>
       </section>
 
-      <section class="mb-[12px]">
-        <h4 class="text-lg mb-[4px]">outline</h4>
+      <section class="mb-[20px]">
+        <h4 class="text-lg mb-[4px]">Outlined</h4>
         <div class="flex gap-[8px]">
           <BasicButton outlined @click="handleClick">Default</BasicButton>
           <BasicButton type="primary" outlined @click="handleClick">Primary</BasicButton>
@@ -28,50 +28,47 @@
         </div>
       </section>
 
-      <section class="mb-[12px]">
-        <h4 class="text-lg mb-[4px]">Disabled</h4>
-        <div class="flex gap-[8px] mb-[8px]">
-          <BasicButton :disabled="true" @click="handleClick">Default</BasicButton>
-          <BasicButton :disabled="true" type="primary" @click="handleClick">Primary</BasicButton>
-          <BasicButton :disabled="true" type="secondary" @click="handleClick"
-            >Secondary</BasicButton
-          >
-          <BasicButton :disabled="true" type="warning" @click="handleClick">Warning</BasicButton>
-          <BasicButton :disabled="true" type="error" @click="handleClick">Error</BasicButton>
-        </div>
+      <section class="mb-[20px]">
+        <h4 class="text-lg mb-[4px]">Shadow</h4>
         <div class="flex gap-[8px]">
-          <BasicButton :disabled="true" outlined @click="handleClick">Default</BasicButton>
-          <BasicButton :disabled="true" outlined type="primary" @click="handleClick"
-            >Primary</BasicButton
-          >
-          <BasicButton :disabled="true" outlined type="secondary" @click="handleClick"
-            >Secondary</BasicButton
-          >
-          <BasicButton :disabled="true" outlined type="warning" @click="handleClick"
-            >Warning</BasicButton
-          >
-          <BasicButton :disabled="true" outlined type="error" @click="handleClick"
-            >Error</BasicButton
-          >
+          <BasicButton shadow @click="handleClick">Shadow</BasicButton>
+        </div>
+      </section>
+
+      <section class="mb-[20px]">
+        <h4 class="text-lg mb-[4px]">Rounded</h4>
+        <div class="flex gap-[8px]">
+          <BasicButton rounded @click="handleClick">Rounded</BasicButton>
+        </div>
+      </section>
+
+      <section class="mb-[20px]">
+        <h4 class="text-lg mb-[4px]">Text</h4>
+        <div class="flex gap-[8px]">
+          <BasicButton text @click="handleClick">Text Default</BasicButton>
+          <BasicButton type="primary" text @click="handleClick">Text Primary</BasicButton>
+          <BasicButton type="secondary" text @click="handleClick">Text Secondary</BasicButton>
+          <BasicButton type="warning" text @click="handleClick">Text Warning</BasicButton>
+          <BasicButton type="error" text @click="handleClick">Text Error</BasicButton>
+        </div>
+      </section>
+
+      <section class="mb-[20px]">
+        <h4 class="text-lg mb-[4px]">Disabled</h4>
+        <div class="flex gap-[8px]">
+          <BasicButton :disabled="true" @click="handleClick">Default</BasicButton>
         </div>
       </section>
     </div>
 
-    <h3 class="text-2xl font-bold mb-[8px]">Link Button</h3>
-    <div class="mb-2">
-      <SecondaryButton href="http://example.com" target="_blank" rel="noopener" @click="handleClick"
-        >Secondary Link</SecondaryButton
-      >
-    </div>
-    <div class="mb-2">
-      <SecondaryButton
-        :disabled="true"
-        href="http://example.com"
-        target="_blank"
-        rer="noopener"
-        @click="handleClick"
-        >Secondary Link Disabled</SecondaryButton
-      >
+    <!-- Link Button -->
+    <div class="mb-[40px]">
+      <h3 class="text-2xl font-bold mb-[8px] border-b-[2px] border-[#777]">Link Button</h3>
+      <div class="mb-2">
+        <LinkButton href="http://example.com" target="_blank" rel="noopener" @click="handleClick"
+          >Link</LinkButton
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -79,13 +76,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import BasicButton from './BasicButton.vue';
-import SecondaryButton from './SecondaryButton.vue';
+import LinkButton from './LinkButton.vue';
 
 export default defineComponent({
   name: 'ButtonSample',
   components: {
     BasicButton,
-    SecondaryButton,
+    LinkButton,
   },
   emits: ['click'],
   setup() {

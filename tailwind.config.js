@@ -2,13 +2,12 @@ module.exports = {
   mode: 'jit',
   purge: ['./index.html', './src/**/*.{vue,js,ts}'],
   darkMode: false, // or 'media' or 'class'
-  variants: {
-    position: ['after'],
-    transform: ['after'],
-    translate: ['after'],
-    inset: ['after'],
-    backgroundImage: ['after'],
-    gradientColorStops: ['after'],
+  variants: {},
+  theme: {
+    extend: {
+      fontFamily: {
+        base: ['Quicksand', 'sans-serif'],
+      },
+    },
   },
-  plugins: [require('tailwindcss-pseudo-elements')],
 };
