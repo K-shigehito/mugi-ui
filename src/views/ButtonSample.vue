@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-[760px] bg-gray-100 mx-auto rounded-[12px] p-[20px]">
+  <div class="bg-gray-100 mx-auto rounded-[4px] p-[28px] font-base">
     <h2 class="mb-[40px] pl-[8px] text-3xl font-bold border-l-[4px] border-[#777]">Buttons</h2>
 
     <!-- Basic Button -->
@@ -46,10 +46,6 @@
         <h4 class="text-lg mb-[4px]">Text</h4>
         <div class="flex gap-[8px]">
           <BasicButton text @click="handleClick">Text Default</BasicButton>
-          <BasicButton type="primary" text @click="handleClick">Text Primary</BasicButton>
-          <BasicButton type="secondary" text @click="handleClick">Text Secondary</BasicButton>
-          <BasicButton type="warning" text @click="handleClick">Text Warning</BasicButton>
-          <BasicButton type="error" text @click="handleClick">Text Error</BasicButton>
         </div>
       </section>
 
@@ -73,6 +69,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
 import BasicButton from '../components/buttons/BasicButton.vue';
 import LinkButton from '../components/buttons/LinkButton.vue';
 

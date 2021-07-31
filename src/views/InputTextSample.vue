@@ -65,7 +65,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import InputText from './InputText.vue';
+import InputText from '../components/forms/InputText.vue';
 
 export default defineComponent({
   name: 'InputTextSample',

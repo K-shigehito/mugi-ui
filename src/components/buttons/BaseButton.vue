@@ -52,7 +52,7 @@ export default defineComponent({
       } else if (props.type === 'primary') {
         return 'bg-[#005392] border-0 border-[#005392] text-[#005392]';
       } else if (props.type === 'secondary') {
-        return 'bg-[#009856] border-0 border-[#009856] text-[#009856]';
+        return 'bg-[#009AC5] border-0 border-[#009AC5] text-[#009AC5]';
       } else if (props.type === 'warning') {
         return 'bg-[#FBC600] border-0 border-[#FBC600] text-[#FBC600]';
       } else if (props.type === 'error') {
@@ -78,7 +78,7 @@ export default defineComponent({
 
     // テキストカラー
     const textColorClass = computed(() =>
-      !textClass.value && !outlineClass.value ? 'text-[#FFFFFF]' : ''
+      !textClass.value && !outlineClass.value ? 'text-[#FFF]' : ''
     );
 
     return {

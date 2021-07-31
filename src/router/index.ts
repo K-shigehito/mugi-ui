@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import ButtonSample from '../views/ButtonSample.vue';
 import Index from '../views/index.vue';
+import InputTextSample from '../views/InputTextSample.vue';
 import ModalSample from '../views/ModalSample.vue';
 
 export const routerHistory = createWebHistory();
@@ -21,6 +22,11 @@ export const router = createRouter({
       path: '/button',
       name: 'button',
       component: ButtonSample,
+    },
+    {
+      path: '/input-text',
+      name: 'input-text',
+      component: InputTextSample,
     },
     {
       path: '/modal',

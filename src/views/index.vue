@@ -1,13 +1,15 @@
 <template>
-  <header class="p-[16px]">
-    <div class="pb-[8px] border-b-[1px] border-b-[#93918F]">
-      <img src="../assets/images/mugi-ui-rogo.svg" width="100" alt="" />
+  <div class="bg-[#F5CAC2] h-[400px] rounded-[12px] font-base">
+    <div class="w-[60%] max-w-[400px] mx-auto pt-[60px]">
+      <img src="../assets/images/mugi-ui-rogo.svg" width="" alt="" />
     </div>
-  </header>
-  <div class="m-4">
-    <div class="flex gap-[12px]">
-      <router-link to="/button">button</router-link>
-      <router-link to="/modal">modal</router-link>
+    <div>
+      <p class="mt-[20px] text-center text-[40px] font-sans font-bold text-[#555] tracking-[4px]">
+        mugi-ui
+      </p>
+      <p class="mt-[6px] font-sans text-center text-[20px] text-[#555]">
+        UI Framework. Vue.js Tailwind CSS
+      </p>
     </div>
   </div>
 </template>
@@ -16,7 +18,6 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'App',
-  components: {},
+  name: 'Indez',
 });
 </script>
