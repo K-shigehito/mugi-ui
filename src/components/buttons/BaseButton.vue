@@ -78,7 +78,7 @@ export default defineComponent({
 
     // テキストカラー
     const textColorClass = computed(() =>
-      textClass.value || outlineClass.value ? '' : 'text-[#FFFFFF]'
+      !textClass.value && !outlineClass.value ? 'text-[#FFFFFF]' : ''
     );
 
     return {

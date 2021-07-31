@@ -65,9 +65,7 @@
     <div class="mb-[40px]">
       <h3 class="text-2xl font-bold mb-[8px] border-b-[2px] border-[#777]">Link Button</h3>
       <div class="mb-2">
-        <LinkButton href="http://example.com" target="_blank" rel="noopener" @click="handleClick"
-          >Link</LinkButton
-        >
+        <LinkButton href="http://example.com" @click="handleClick">Link</LinkButton>
       </div>
     </div>
   </div>
@@ -75,8 +73,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import BasicButton from './BasicButton.vue';
-import LinkButton from './LinkButton.vue';
+import BasicButton from '../components/buttons/BasicButton.vue';
+import LinkButton from '../components/buttons/LinkButton.vue';
 
 export default defineComponent({
   name: 'ButtonSample',
