@@ -1,10 +1,12 @@
 <template>
-  <div class="bg-gray-100 mx-auto rounded-[4px] p-[28px] font-base">
-    <h2 class="mb-[40px] pl-[8px] text-3xl font-bold border-l-[4px] border-[#777]">Buttons</h2>
+  <div class="bg-gray-100 mx-auto rounded-[4px] p-[28px] text-[#333132]">
+    <h2 class="mb-[40px] pl-[8px] text-3xl font-base font-bold border-l-[6px] border-[#DF212C]">
+      Buttons
+    </h2>
 
     <!-- Basic Button -->
     <div class="mb-[40px]">
-      <h3 class="text-2xl font-bold mb-[8px] border-b-[2px] border-[#777]">Basic Button</h3>
+      <h3 class="text-2xl mb-[8px] font-base font-bold">Basic Button</h3>
 
       <section class="mb-[20px]">
         <h4 class="text-lg mb-[4px]">Type</h4>
@@ -59,9 +61,11 @@
 
     <!-- Link Button -->
     <div class="mb-[40px]">
-      <h3 class="text-2xl font-bold mb-[8px] border-b-[2px] border-[#777]">Link Button</h3>
+      <h3 class="text-2xl mb-[8px] font-base font-bold">Link Button</h3>
       <div class="mb-2">
-        <LinkButton href="http://example.com" @click="handleClick">Link</LinkButton>
+        <LinkButton href="http://example.com" target="_blank" rel="noopener" @click="handleClick"
+          >Link</LinkButton
+        >
       </div>
     </div>
   </div>

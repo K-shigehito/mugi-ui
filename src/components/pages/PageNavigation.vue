@@ -1,11 +1,11 @@
 <template>
   <div class="font-base">
     <ul>
-      <li class="text-[16px] font-bold">
-        <router-link to="/">インストール</router-link>
+      <li class="text-[20px] font-bold text-[#333132]">
+        <router-link to="/">install</router-link>
       </li>
-      <li class="mt-[4px] text-[16px] font-bold">
-        コンポーネント
+      <li class="mt-[4px] text-[20px] font-bold text-[#333132]">
+        component
         <ul class="mt-[4px] font-medium text-[18px]">
           <li class="">
             <router-link to="/button">・Button</router-link>
