@@ -16,6 +16,9 @@
           <li class="">
             <router-link to="/button">・Modal</router-link>
           </li>
+          <li class="">
+            <router-link to="/button">・Loader</router-link>
+          </li>
         </ul>
       </li>
     </ul>

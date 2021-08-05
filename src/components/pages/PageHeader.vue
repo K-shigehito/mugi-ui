@@ -1,6 +1,46 @@
 <template>
-  <header class="">
-    <div class="flex items-center pb-[8px] border-b-[1px] border-b-[#333132]">
+  <header class="sticky top-0 pt-[16px] bg-white">
+    <div class="flex gap-[12px] items-center pb-[8px] border-b-[1px] border-b-[#333132]">
+      <!-- ナビゲーションボタン -->
+      <div
+        class="
+          md:hidden
+          flex-grow-0 flex
+          items-center
+          justify-center
+          w-[40px]
+          h-[40px]
+          hover:bg-gray-100
+          rounded-full
+          cursor-pointer
+        "
+      >
+        <div>
+          <span
+            class="before:block before:h-[2px] before:w-[22px] before:bg-gray-700 before:mx-auto"
+          ></span>
+          <span
+            class="
+              before:block
+              before:h-[2px]
+              before:w-[22px]
+              before:bg-gray-700
+              before:mx-auto
+              before:mt-[5px]
+            "
+          ></span>
+          <span
+            class="
+              before:block
+              before:h-[2px]
+              before:w-[22px]
+              before:bg-gray-700
+              before:mx-auto
+              before:mt-[5px]
+            "
+          ></span>
+        </div>
+      </div>
       <div class="flex-grow" @click="goToIndex">
         <img
           src="../../assets/images/mugi-ui-rogo.svg"

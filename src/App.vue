@@ -1,5 +1,5 @@
 <template>
-  <div class="m-4">
+  <div id="page-wrapper" class="mx-[16px]">
     <div class="grid grid-cols-12 gap-x-[12px]">
       <!-- ヘッダー -->
       <PageHeader class="col-span-12" />
