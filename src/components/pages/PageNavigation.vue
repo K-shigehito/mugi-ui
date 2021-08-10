@@ -19,6 +19,9 @@
           <li class="">
             <router-link to="/button">・Loader</router-link>
           </li>
+          <li class="">
+            <router-link to="/accordion">・Accordion</router-link>
+          </li>
         </ul>
       </li>
     </ul>

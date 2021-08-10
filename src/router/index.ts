@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import AccordionSample from '../views/AccordionSample.vue';
 import ButtonSample from '../views/ButtonSample.vue';
 import Index from '../views/index.vue';
 import InputTextSample from '../views/InputTextSample.vue';
@@ -32,6 +33,11 @@ export const router = createRouter({
       path: '/modal',
       name: 'modal',
       component: ModalSample,
+    },
+    {
+      path: '/accordion',
+      name: 'accordion',
+      component: AccordionSample,
     },
   ],
 });
