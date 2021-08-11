@@ -1,18 +1,18 @@
 <template>
-  <div class="w-[200px]">
+  <div class="relative overflow-hidden rounded-[10px] shadow-md" :class="[openClass]">
     <h3>
       <button ref="head" type="button" @click="toggle">
         <slot name="head" />
       </button>
     </h3>
-    <div ref="body">
+    <div ref="body" class="pt-[20px] px-[120px] pb-[40px]">
       <slot name="body" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, ref, toRefs } from 'vue';
+import { defineComponent, reactive, ref, toRefs, computed } from 'vue';
 export default defineComponent({
   name: 'Accordion',
   setup() {
@@ -29,7 +29,6 @@ export default defineComponent({
       const bodyHeight: number = body.value?.offsetHeight || 0;
       state.heigth = `${headHeight + bodyHeight}px`;
       state.isOpen = true;
-      console.log('open');
     };
 
     const close = () => {
@@ -38,15 +37,21 @@ export default defineComponent({
     };
 
     const toggle = () => {
-      state.isOpen ? close : open;
+      state.isOpen ? close() : open();
       console.log(state.isOpen);
     };
+
+    // 動的クラス
+    const openClass = computed(() =>
+      state.isOpen ? 'box-border border-[1px] bg-opacity-0 hover:bg-opacity-10' : ''
+    );
 
     return {
       head,
       body,
       toggle,
       ...toRefs(state),
+      openClass,
     };
   },
 });
