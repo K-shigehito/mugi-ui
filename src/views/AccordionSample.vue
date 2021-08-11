@@ -1,5 +1,5 @@
 <template>
-  <div v-for="data in faqData" :key="data.id">
+  <div v-for="data in faqData" :key="data.id" class="pb-[24px]">
     <Accordion>
       <template #head>
         <span v-html="data.question"></span>
@@ -27,17 +27,20 @@ export default defineComponent({
       {
         id: 1,
         question: 'かわいいねこの名前',
-        answer: 'むぎ',
+        answer:
+          'むぎはかわいいねこです。むぎはかわいいねこです。むぎはかわいいねこです。むぎはかわいいねこです。むぎはかわいいねこです。むぎはかわいいねこです。むぎはかわいいねこです。',
       },
       {
         id: 2,
         question: 'おもしろいねこの名前',
-        answer: 'ハナ',
+        answer:
+          'ハナはおもしろいねこです。ハナはおもしろいねこです。ハナはおもしろいねこです。ハナはおもしろいねこです。ハナはおもしろいねこです。ハナはおもしろいねこです。ハナはおもしろいねこです。',
       },
       {
         id: 3,
         question: 'まじめなねこの名前',
-        answer: 'クゥ',
+        answer:
+          'クゥはまじめなねこです。クゥはまじめなねこです。クゥはまじめなねこです。クゥはまじめなねこです。クゥはまじめなねこです。クゥはまじめなねこです。クゥはまじめなねこです。',
       },
     ];
 

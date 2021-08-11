@@ -1,11 +1,29 @@
 <template>
-  <div class="relative overflow-hidden rounded-[10px] shadow-md" :class="[openClass]">
-    <h3>
-      <button ref="head" type="button" @click="toggle">
+  <div
+    class="relative overflow-hidden rounded-[10px] shadow-md"
+    :class="[openClass]"
+    :style="{ height }"
+  >
+    <h3 class="m-0">
+      <button
+        ref="head"
+        class="
+          block
+          w-[100%]
+          py-[24px]
+          px-[40px]
+          text-[18px]
+          leading-[1.8]
+          text-left
+          cursor-pointer
+        "
+        type="button"
+        @click="toggle"
+      >
         <slot name="head" />
       </button>
     </h3>
-    <div ref="body" class="pt-[20px] px-[120px] pb-[40px]">
+    <div ref="body" class="pt-[12px] px-[40px] pb-[24px]">
       <slot name="body" />
     </div>
   </div>
@@ -17,7 +35,7 @@ export default defineComponent({
   name: 'Accordion',
   setup() {
     const state = reactive({
-      heigth: '1em',
+      height: '1em',
       isOpen: false,
     });
 
@@ -27,12 +45,12 @@ export default defineComponent({
     const open = () => {
       const headHeight: number = head.value?.offsetHeight || 0;
       const bodyHeight: number = body.value?.offsetHeight || 0;
-      state.heigth = `${headHeight + bodyHeight}px`;
+      state.height = `${headHeight + bodyHeight}px`;
       state.isOpen = true;
     };
 
     const close = () => {
-      state.heigth = `${head.value?.offsetHeight}px`;
+      state.height = `${head.value?.offsetHeight}px`;
       state.isOpen = false;
     };
 
