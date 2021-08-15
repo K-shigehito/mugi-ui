@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative overflow-hidden rounded-[10px] shadow-md"
+    class="relative overflow-hidden rounded-[10px] bg-[#888] shadow-md"
     :class="[openClass]"
     :style="{ height }"
   >
