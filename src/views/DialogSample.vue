@@ -24,9 +24,9 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import PrimaryButton from '../buttons/BasicButton.vue';
-import SecondaryButton from '../buttons/LinkButton.vue';
-import MyDialog from './MyDialog.vue';
+import PrimaryButton from '../components/buttons/BasicButton.vue';
+import SecondaryButton from '../components/buttons/LinkButton.vue';
+import MyDialog from '../components/dialog/MyDialog.vue';
 
 export default defineComponent({
   name: 'DialogSample',
