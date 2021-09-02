@@ -1,6 +1,14 @@
 <template>
   <div class="bg-gray-100 mx-auto rounded-[4px] p-[28px] text-[#333132]">
-    <h2 class="mb-[40px] pl-[8px] text-3xl font-base font-bold border-l-[6px] border-[#DF212C]">
+    <h2
+      class="
+        mb-[40px]
+        pl-[8px]
+        text-3xl
+        font-base font-bold
+        border-l-[6px] border-[#DF212C]
+      "
+    >
       Buttons
     </h2>
 
@@ -13,7 +21,9 @@
         <div class="flex gap-[8px]">
           <BasicButton @click="handleClick">Default</BasicButton>
           <BasicButton type="primary" @click="handleClick">Primary</BasicButton>
-          <BasicButton type="secondary" @click="handleClick">Secondary</BasicButton>
+          <BasicButton type="secondary" @click="handleClick"
+            >Secondary</BasicButton
+          >
           <BasicButton type="warning" @click="handleClick">Warning</BasicButton>
           <BasicButton type="error" @click="handleClick">Error</BasicButton>
         </div>
@@ -23,10 +33,18 @@
         <h4 class="text-lg mb-[4px]">Outlined</h4>
         <div class="flex gap-[8px]">
           <BasicButton outlined @click="handleClick">Default</BasicButton>
-          <BasicButton type="primary" outlined @click="handleClick">Primary</BasicButton>
-          <BasicButton type="secondary" outlined @click="handleClick">Secondary</BasicButton>
-          <BasicButton type="warning" outlined @click="handleClick">Warning</BasicButton>
-          <BasicButton type="error" outlined @click="handleClick">Error</BasicButton>
+          <BasicButton type="primary" outlined @click="handleClick"
+            >Primary</BasicButton
+          >
+          <BasicButton type="secondary" outlined @click="handleClick"
+            >Secondary</BasicButton
+          >
+          <BasicButton type="warning" outlined @click="handleClick"
+            >Warning</BasicButton
+          >
+          <BasicButton type="error" outlined @click="handleClick"
+            >Error</BasicButton
+          >
         </div>
       </section>
 
@@ -54,7 +72,9 @@
       <section class="mb-[20px]">
         <h4 class="text-lg mb-[4px]">Disabled</h4>
         <div class="flex gap-[8px]">
-          <BasicButton :disabled="true" @click="handleClick">Default</BasicButton>
+          <BasicButton :disabled="true" @click="handleClick"
+            >Default</BasicButton
+          >
         </div>
       </section>
     </div>
@@ -63,7 +83,11 @@
     <div class="mb-[40px]">
       <h3 class="text-2xl mb-[8px] font-base font-bold">Link Button</h3>
       <div class="mb-2">
-        <LinkButton href="http://example.com" target="_blank" rel="noopener" @click="handleClick"
+        <LinkButton
+          href="http://example.com"
+          target="_blank"
+          rel="noopener"
+          @click="handleClick"
           >Link</LinkButton
         >
       </div>

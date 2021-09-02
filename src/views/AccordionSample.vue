@@ -1,13 +1,26 @@
 <template>
-  <div v-for="data in faqData" :key="data.id" class="pb-[24px]">
-    <Accordion>
-      <template #head>
-        <span v-html="data.question"></span>
-      </template>
-      <template #body>
-        <span v-html="data.answer"></span>
-      </template>
-    </Accordion>
+  <div class="bg-gray-100 mx-auto rounded-[4px] p-[28px] text-[#333132]">
+    <h2
+      class="
+        mb-[40px]
+        pl-[8px]
+        text-3xl
+        font-base font-bold
+        border-l-[6px] border-[#DF212C]
+      "
+    >
+      Accordion
+    </h2>
+    <div v-for="data in faqData" :key="data.id" class="pb-[24px]">
+      <Accordion>
+        <template #head>
+          <span v-html="data.question"></span>
+        </template>
+        <template #body>
+          <span v-html="data.answer"></span>
+        </template>
+      </Accordion>
+    </div>
   </div>
 </template>
 

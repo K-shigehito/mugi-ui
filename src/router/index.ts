@@ -4,6 +4,7 @@ import ButtonSample from '../views/ButtonSample.vue';
 import DialogSample from '../views/DialogSample.vue';
 import FormSample from '../views/FormSample.vue';
 import Index from '../views/index.vue';
+import LoaderSample from '../views/LoaderSample.vue';
 
 export const routerHistory = createWebHistory();
 
@@ -33,6 +34,11 @@ export const router = createRouter({
       path: '/dialog',
       name: 'dialog',
       component: DialogSample,
+    },
+    {
+      path: '/loader',
+      name: 'loader',
+      component: LoaderSample,
     },
     {
       path: '/accordion',

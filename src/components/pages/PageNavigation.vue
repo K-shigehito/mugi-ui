@@ -14,10 +14,10 @@
             <router-link to="/form">・Form</router-link>
           </li>
           <li class="">
-            <router-link to="/dialog">・Modal</router-link>
+            <router-link to="/dialog">・Dialog</router-link>
           </li>
           <li class="">
-            <router-link to="/button">・Loader</router-link>
+            <router-link to="/loader">・Loader</router-link>
           </li>
           <li class="">
             <router-link to="/accordion">・Accordion</router-link>

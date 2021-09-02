@@ -1,6 +1,16 @@
 <template>
-  <div>
-    <p class="mb-2 text-2xl">Dialogs</p>
+  <div class="bg-gray-100 mx-auto rounded-[4px] p-[28px] text-[#333132]">
+    <h2
+      class="
+        mb-[40px]
+        pl-[8px]
+        text-3xl
+        font-base font-bold
+        border-l-[6px] border-[#DF212C]
+      "
+    >
+      Dialog
+    </h2>
     <div>
       <MyDialog :visible="dialogVisible" @backdrop-clicked="switchDialog">
         <template #title>

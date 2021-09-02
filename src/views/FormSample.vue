@@ -1,6 +1,16 @@
 <template>
-  <div>
-    <p class="mb-2 text-2xl">Forms</p>
+  <div class="bg-gray-100 mx-auto rounded-[4px] p-[28px] text-[#333132]">
+    <h2
+      class="
+        mb-[40px]
+        pl-[8px]
+        text-3xl
+        font-base font-bold
+        border-l-[6px] border-[#DF212C]
+      "
+    >
+      Forms
+    </h2>
 
     <!-- v-model -->
     <div class="w-80">
@@ -28,7 +38,11 @@
 
     <!-- error -->
     <div class="w-80">
-      <InputText v-model:value="inputTextValue" :is-error="true" label="error"></InputText>
+      <InputText
+        v-model:value="inputTextValue"
+        :is-error="true"
+        label="error"
+      ></InputText>
     </div>
 
     <!-- full width -->
@@ -38,36 +52,64 @@
 
     <!-- type：number -->
     <div class="w-80">
-      <InputText v-model:value="inputNumberValue" type="number" label="number"></InputText>
+      <InputText
+        v-model:value="inputNumberValue"
+        type="number"
+        label="number"
+      ></InputText>
     </div>
 
     <!-- type：password -->
     <div class="w-80">
-      <InputText v-model:value="inputPasswordValue" type="password" label="password"></InputText>
+      <InputText
+        v-model:value="inputPasswordValue"
+        type="password"
+        label="password"
+      ></InputText>
     </div>
 
     <!-- type：email -->
     <div class="w-80">
-      <InputText v-model:value="inputEmailValue" type="email" label="email"></InputText>
+      <InputText
+        v-model:value="inputEmailValue"
+        type="email"
+        label="email"
+      ></InputText>
     </div>
 
     <!-- type：tel -->
     <div class="w-80">
-      <InputText v-model:value="inputTelValue" type="tel" label="tel"></InputText>
+      <InputText
+        v-model:value="inputTelValue"
+        type="tel"
+        label="tel"
+      ></InputText>
     </div>
 
     <!-- type：date -->
     <div class="w-80">
-      <InputText v-model:value="inputDateValue" type="date" label="date"></InputText>
+      <InputText
+        v-model:value="inputDateValue"
+        type="date"
+        label="date"
+      ></InputText>
     </div>
   </div>
   <div>
     <div class="m-4">選択中：{{ selectedRadio }}</div>
     <div class="m-4">
-      <InputRadio v-model:checked="selectedRadio" :value="radioValue1" name="radio"></InputRadio>
+      <InputRadio
+        v-model:checked="selectedRadio"
+        :value="radioValue1"
+        name="radio"
+      ></InputRadio>
     </div>
     <div class="m-4">
-      <InputRadio v-model:checked="selectedRadio" :value="radioValue2" name="radio"></InputRadio>
+      <InputRadio
+        v-model:checked="selectedRadio"
+        :value="radioValue2"
+        name="radio"
+      ></InputRadio>
     </div>
     <div class="m-4">
       <InputRadio
