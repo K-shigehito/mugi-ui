@@ -4,7 +4,9 @@
     <div>
       <MyDialog :visible="dialogVisible" @backdrop-clicked="switchDialog">
         <template #title>
-          <p class="font-bold">ダイアログ</p>
+          <p class="pb-[6px] border-b-[1px] border-gray-500 font-bold">
+            ダイアログ
+          </p>
         </template>
         <template #body>
           ダミー本文です。ダミー本文です。ダミー本文です。ダミー本文です。ダミー本文です。ダミー本文です。ダミー本文です。ダミー本文です。ダミー本文です。

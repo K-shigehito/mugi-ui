@@ -11,7 +11,7 @@
             <router-link to="/button">・Button</router-link>
           </li>
           <li class="">
-            <router-link to="/input-text">・Form</router-link>
+            <router-link to="/form">・Form</router-link>
           </li>
           <li class="">
             <router-link to="/dialog">・Modal</router-link>

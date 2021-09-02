@@ -3,6 +3,7 @@
     <div
       v-bind="$attrs"
       class="
+        z-10
         fixed
         top-0
         left-0
@@ -12,12 +13,20 @@
         w-screen
         h-screen
         overflow-y-scroll
-        backdrop-filter backdrop-blur-md
       "
       @click.stop="clickBackDrop"
     >
       <section
-        class="box-border max-w-screen-sm p-3 mx-2 my-16 bg-white shadow-xl rounded-md"
+        class="
+          box-border
+          max-w-screen-sm
+          p-3
+          mx-2
+          my-16
+          bg-white
+          shadow-xl
+          rounded-md
+        "
         @click.stop
       >
         <!-- ヘッダー -->
@@ -36,6 +45,9 @@
         </footer>
       </section>
     </div>
+    <div
+      class="z-0 fixed top-0 left-0 w-[100%] h-[100%] bg-gray-400 opacity-80"
+    ></div>
   </teleport>
 </template>
 

@@ -31,7 +31,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, PropType, ref } from 'vue';
+import { defineComponent, computed, PropType } from 'vue';
+import { useFocus } from '../../composables/eventHandler';
 
 export default defineComponent({
   name: 'InputText',
@@ -70,7 +71,10 @@ export default defineComponent({
     'update:value': (modelValu: string) => true,
   },
   setup(props, { emit }) {
-    const isFocus = ref(false);
+    const { isFocus, handleFocus, handleBlur } = useFocus(
+      { eventName: 'focus' },
+      { eventName: 'blur' }
+    );
 
     const handleInput = ({ target }: { target: HTMLInputElement }) => {
       emit('input', target.value);
@@ -80,14 +84,14 @@ export default defineComponent({
       emit('change', target.value);
       emit('update:value', target.value);
     };
-    const handleFocus = (event: Event) => {
-      isFocus.value = true;
-      emit('focus', event);
-    };
-    const handleBlur = (event: Event) => {
-      isFocus.value = false;
-      emit('blur', event);
-    };
+    // const handleFocus = (event: Event) => {
+    //   isFocus.value = true;
+    //   emit('focus', event);
+    // };
+    // const handleBlur = (event: Event) => {
+    //   isFocus.value = false;
+    //   emit('blur', event);
+    // };
 
     const focusedClass = computed(() =>
       isFocus.value ? 'border-blue-700 ring-blue-100 transition duration-100' : 'border-gray-300'

@@ -2,8 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import AccordionSample from '../views/AccordionSample.vue';
 import ButtonSample from '../views/ButtonSample.vue';
 import DialogSample from '../views/DialogSample.vue';
+import FormSample from '../views/FormSample.vue';
 import Index from '../views/index.vue';
-import InputTextSample from '../views/InputTextSample.vue';
 
 export const routerHistory = createWebHistory();
 
@@ -25,9 +25,9 @@ export const router = createRouter({
       component: ButtonSample,
     },
     {
-      path: '/input-text',
-      name: 'input-text',
-      component: InputTextSample,
+      path: '/form',
+      name: 'form',
+      component: FormSample,
     },
     {
       path: '/dialog',
