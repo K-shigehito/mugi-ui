@@ -1,7 +1,7 @@
 {
   "name": "mugi-ui",
   "version": "0.0.1",
-  "repository": "https://github.com/ushironoko/mugi-ui.git",
+  "repository": "https://github.com/K-shigehito/mugi-ui.git",
   "author": "shigehito",
   "scripts": {
     "dev": "vite",
